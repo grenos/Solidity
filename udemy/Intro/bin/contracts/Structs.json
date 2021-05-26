@@ -1,0 +1,1851 @@
+{
+    "contractName": "Structs",
+    "abi": [
+        {
+            "inputs": [
+                {
+                    "internalType": "address",
+                    "name": "",
+                    "type": "address"
+                }
+            ],
+            "name": "balanceReceived",
+            "outputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "totalBalance",
+                    "type": "uint256"
+                },
+                {
+                    "internalType": "uint256",
+                    "name": "paymentsIndexKey",
+                    "type": "uint256"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "inputs": [],
+            "name": "getBalance",
+            "outputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "",
+                    "type": "uint256"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "inputs": [],
+            "name": "sendFunds",
+            "outputs": [],
+            "stateMutability": "payable",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "address payable",
+                    "name": "_to",
+                    "type": "address"
+                }
+            ],
+            "name": "withdrawAllFunds",
+            "outputs": [],
+            "stateMutability": "nonpayable",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "address payable",
+                    "name": "_to",
+                    "type": "address"
+                },
+                {
+                    "internalType": "uint256",
+                    "name": "_amount",
+                    "type": "uint256"
+                }
+            ],
+            "name": "withdrawFunds",
+            "outputs": [],
+            "stateMutability": "nonpayable",
+            "type": "function"
+        }
+    ],
+    "metadata": "{\"compiler\":{\"version\":\"0.8.1+commit.df193b15\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"name\":\"balanceReceived\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"totalBalance\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"paymentsIndexKey\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getBalance\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"sendFunds\",\"outputs\":[],\"stateMutability\":\"payable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address payable\",\"name\":\"_to\",\"type\":\"address\"}],\"name\":\"withdrawAllFunds\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address payable\",\"name\":\"_to\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"_amount\",\"type\":\"uint256\"}],\"name\":\"withdrawFunds\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"/Users/vasilis/Projects/Solidity/udemy/contracts/05_maps_and_structs.sol\":\"Structs\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/vasilis/Projects/Solidity/udemy/contracts/05_maps_and_structs.sol\":{\"keccak256\":\"0x820ae7de69341d9cbc8bebcaa0902beb46d2dfebe864387d6f59924ae8d42cd5\",\"license\":\"GPL-3.0\",\"urls\":[\"bzz-raw://e5652c1fffc8aefe618bc167bcb32b5e771be6773a2a93847994b7712c6ef0d5\",\"dweb:/ipfs/QmQ8RjoNBKacAsfWjFnhPD2ESebF9916Dk8htY6J47T8bC\"]}},\"version\":1}",
+    "bytecode": "608060405234801561001057600080fd5b506103d6806100206000396000f3fe60806040526004361061004a5760003560e01c806312065fe01461004f57806332dee40b1461007a5780638d68cf591461009c578063c1075329146100a4578063d18a42e1146100c4575b600080fd5b34801561005b57600080fd5b506100646100f2565b6040516100719190610311565b60405180910390f35b34801561008657600080fd5b5061009a610095366004610278565b6100f6565b005b61009a610147565b3480156100b057600080fd5b5061009a6100bf36600461029b565b6101cd565b3480156100d057600080fd5b506100e46100df366004610278565b61025f565b60405161007192919061031a565b4790565b33600090815260208190526040808220805490839055905190916001600160a01b0384169183156108fc0291849190818181858888f19350505050158015610142573d6000803e3d6000fd5b505050565b3360009081526020819052604081208054349290610166908490610328565b909155505060408051808201825234815242602080830191825233600081815280835285812060018082018054808552600290930186529783208751815595519501949094559081529081905283549293919291906101c483610357565b91905055505050565b336000908152602081905260409020548111156102055760405162461bcd60e51b81526004016101fc906102c6565b60405180910390fd5b3360009081526020819052604081208054839290610224908490610340565b90915550506040516001600160a01b0383169082156108fc029083906000818181858888f19350505050158015610142573d6000803e3d6000fd5b6000602081905290815260409020805460019091015482565b600060208284031215610289578081fd5b813561029481610388565b9392505050565b600080604083850312156102ad578081fd5b82356102b881610388565b946020939093013593505050565b6020808252602b908201527f596f7520646f6e2774206861766520656e6f7567682066756e647320696e207960408201526a1bdd5c881858d8dbdd5b9d60aa1b606082015260800190565b90815260200190565b918252602082015260400190565b6000821982111561033b5761033b610372565b500190565b60008282101561035257610352610372565b500390565b600060001982141561036b5761036b610372565b5060010190565b634e487b7160e01b600052601160045260246000fd5b6001600160a01b038116811461039d57600080fd5b5056fea2646970667358221220d83791504d52f3b6b435dea57be41c94d77a834febc890e425a1dc7f325c895164736f6c63430008010033",
+    "deployedBytecode": "60806040526004361061004a5760003560e01c806312065fe01461004f57806332dee40b1461007a5780638d68cf591461009c578063c1075329146100a4578063d18a42e1146100c4575b600080fd5b34801561005b57600080fd5b506100646100f2565b6040516100719190610311565b60405180910390f35b34801561008657600080fd5b5061009a610095366004610278565b6100f6565b005b61009a610147565b3480156100b057600080fd5b5061009a6100bf36600461029b565b6101cd565b3480156100d057600080fd5b506100e46100df366004610278565b61025f565b60405161007192919061031a565b4790565b33600090815260208190526040808220805490839055905190916001600160a01b0384169183156108fc0291849190818181858888f19350505050158015610142573d6000803e3d6000fd5b505050565b3360009081526020819052604081208054349290610166908490610328565b909155505060408051808201825234815242602080830191825233600081815280835285812060018082018054808552600290930186529783208751815595519501949094559081529081905283549293919291906101c483610357565b91905055505050565b336000908152602081905260409020548111156102055760405162461bcd60e51b81526004016101fc906102c6565b60405180910390fd5b3360009081526020819052604081208054839290610224908490610340565b90915550506040516001600160a01b0383169082156108fc029083906000818181858888f19350505050158015610142573d6000803e3d6000fd5b6000602081905290815260409020805460019091015482565b600060208284031215610289578081fd5b813561029481610388565b9392505050565b600080604083850312156102ad578081fd5b82356102b881610388565b946020939093013593505050565b6020808252602b908201527f596f7520646f6e2774206861766520656e6f7567682066756e647320696e207960408201526a1bdd5c881858d8dbdd5b9d60aa1b606082015260800190565b90815260200190565b918252602082015260400190565b6000821982111561033b5761033b610372565b500190565b60008282101561035257610352610372565b500390565b600060001982141561036b5761036b610372565b5060010190565b634e487b7160e01b600052601160045260246000fd5b6001600160a01b038116811461039d57600080fd5b5056fea2646970667358221220d83791504d52f3b6b435dea57be41c94d77a834febc890e425a1dc7f325c895164736f6c63430008010033",
+    "sourceMap": "214:3444:5:-:0;;;;;;;;;;;;;;;;;;;",
+    "deployedSourceMap": "214:3444:5:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1045:224;;;;;;;;;;;;;:::i;:::-;;;;;;;:::i;:::-;;;;;;;;2194:1161;;;;;;;;;;-1:-1:-1;2194:1161:5;;;;;:::i;:::-;;:::i;:::-;;1284:895;;;:::i;3375:281::-;;;;;;;;;;-1:-1:-1;3375:281:5;;;;;:::i;:::-;;:::i;979:50::-;;;;;;;;;;-1:-1:-1;979:50:5;;;;;:::i;:::-;;:::i;:::-;;;;;;;;:::i;1045:224::-;1241:21;1045:224;:::o;2194:1161::-;3231:10;3192:20;3215:27;;;;;;;;;;;:40;;3265:44;;;;3319:29;;3215:40;;-1:-1:-1;;;;;3319:12:5;;;:29;;;;;3215:40;;3319:29;;3192:20;3319:29;3215:40;3319:12;:29;;;;;;;;;;;;;;;;;;;;;2194:1161;;:::o;1284:895::-;1424:10;1408:15;:27;;;;;;;;;;:53;;1452:9;;1408:15;:53;;1452:9;;1408:53;:::i;:::-;;;;-1:-1:-1;;1591:35:5;;;;;;;;1599:9;1591:35;;1610:15;1591:35;;;;;;;2022:10;1566:22;2006:27;;;;;;;;;:44;;;;;;2060:46;;;:36;;;;:46;;;;;:56;;;;;;;;;;;;2126:27;;;;;;;:46;;1591:35;;2006:44;;2126:46;2006:44;2126:46;;;:::i;:::-;;;;;;1284:895;;:::o;3375:281::-;3474:10;3458:15;:27;;;;;;;;;;:40;:51;-1:-1:-1;3458:51:5;3450:107;;;;-1:-1:-1;;;3450:107:5;;;;;;;:::i;:::-;;;;;;;;;3583:10;3567:15;:27;;;;;;;;;;:51;;3611:7;;3567:15;:51;;3611:7;;3567:51;:::i;:::-;;;;-1:-1:-1;;3628:21:5;;-1:-1:-1;;;;;3628:12:5;;;:21;;;;;3641:7;;3628:21;;;;3641:7;3628:12;:21;;;;;;;;;;;;;;;;;;;979:50;;;;;;;;;;;;;;;;;;;;:::o;14:259:12:-;;126:2;114:9;105:7;101:23;97:32;94:2;;;147:6;139;132:22;94:2;191:9;178:23;210:33;237:5;210:33;:::i;:::-;262:5;84:189;-1:-1:-1;;;84:189:12:o;550:335::-;;;687:2;675:9;666:7;662:23;658:32;655:2;;;708:6;700;693:22;655:2;752:9;739:23;771:33;798:5;771:33;:::i;:::-;823:5;875:2;860:18;;;;847:32;;-1:-1:-1;;;645:240:12:o;890:407::-;1092:2;1074:21;;;1131:2;1111:18;;;1104:30;1170:34;1165:2;1150:18;;1143:62;-1:-1:-1;;;1236:2:12;1221:18;;1214:41;1287:3;1272:19;;1064:233::o;1302:177::-;1448:25;;;1436:2;1421:18;;1403:76::o;1484:248::-;1658:25;;;1714:2;1699:18;;1692:34;1646:2;1631:18;;1613:119::o;1737:128::-;;1808:1;1804:6;1801:1;1798:13;1795:2;;;1814:18;;:::i;:::-;-1:-1:-1;1850:9:12;;1785:80::o;1870:125::-;;1938:1;1935;1932:8;1929:2;;;1943:18;;:::i;:::-;-1:-1:-1;1980:9:12;;1919:76::o;2000:135::-;;-1:-1:-1;;2060:17:12;;2057:2;;;2080:18;;:::i;:::-;-1:-1:-1;2127:1:12;2116:13;;2047:88::o;2140:127::-;2201:10;2196:3;2192:20;2189:1;2182:31;2232:4;2229:1;2222:15;2256:4;2253:1;2246:15;2272:133;-1:-1:-1;;;;;2349:31:12;;2339:42;;2329:2;;2395:1;2392;2385:12;2329:2;2319:86;:::o",
+    "sourcePath": "/Users/vasilis/Projects/Solidity/udemy/contracts/05_maps_and_structs.sol",
+    "compiler": {
+        "name": "solc",
+        "version": "0.8.1+commit.df193b15"
+    },
+    "ast": {
+        "absolutePath": "/Users/vasilis/Projects/Solidity/udemy/contracts/05_maps_and_structs.sol",
+        "exportedSymbols": {
+            "Structs": [
+                702
+            ]
+        },
+        "id": 703,
+        "license": "GPL-3.0",
+        "nodeType": "SourceUnit",
+        "nodes": [
+            {
+                "id": 560,
+                "literals": [
+                    "solidity",
+                    "^",
+                    "0.8",
+                    ".1"
+                ],
+                "nodeType": "PragmaDirective",
+                "src": "36:23:5"
+            },
+            {
+                "abstract": false,
+                "baseContracts": [],
+                "contractDependencies": [],
+                "contractKind": "contract",
+                "fullyImplemented": true,
+                "id": 702,
+                "linearizedBaseContracts": [
+                    702
+                ],
+                "name": "Structs",
+                "nodeType": "ContractDefinition",
+                "nodes": [
+                    {
+                        "canonicalName": "Structs.Payment",
+                        "id": 565,
+                        "members": [
+                            {
+                                "constant": false,
+                                "id": 562,
+                                "mutability": "mutable",
+                                "name": "amount",
+                                "nodeType": "VariableDeclaration",
+                                "scope": 565,
+                                "src": "267:11:5",
+                                "stateVariable": false,
+                                "storageLocation": "default",
+                                "typeDescriptions": {
+                                    "typeIdentifier": "t_uint256",
+                                    "typeString": "uint256"
+                                },
+                                "typeName": {
+                                    "id": 561,
+                                    "name": "uint",
+                                    "nodeType": "ElementaryTypeName",
+                                    "src": "267:4:5",
+                                    "typeDescriptions": {
+                                        "typeIdentifier": "t_uint256",
+                                        "typeString": "uint256"
+                                    }
+                                },
+                                "visibility": "internal"
+                            },
+                            {
+                                "constant": false,
+                                "id": 564,
+                                "mutability": "mutable",
+                                "name": "timestamp",
+                                "nodeType": "VariableDeclaration",
+                                "scope": 565,
+                                "src": "288:14:5",
+                                "stateVariable": false,
+                                "storageLocation": "default",
+                                "typeDescriptions": {
+                                    "typeIdentifier": "t_uint256",
+                                    "typeString": "uint256"
+                                },
+                                "typeName": {
+                                    "id": 563,
+                                    "name": "uint",
+                                    "nodeType": "ElementaryTypeName",
+                                    "src": "288:4:5",
+                                    "typeDescriptions": {
+                                        "typeIdentifier": "t_uint256",
+                                        "typeString": "uint256"
+                                    }
+                                },
+                                "visibility": "internal"
+                            }
+                        ],
+                        "name": "Payment",
+                        "nodeType": "StructDefinition",
+                        "scope": 702,
+                        "src": "242:67:5",
+                        "visibility": "public"
+                    },
+                    {
+                        "canonicalName": "Structs.Balance",
+                        "id": 575,
+                        "members": [
+                            {
+                                "constant": false,
+                                "id": 567,
+                                "mutability": "mutable",
+                                "name": "totalBalance",
+                                "nodeType": "VariableDeclaration",
+                                "scope": 575,
+                                "src": "344:17:5",
+                                "stateVariable": false,
+                                "storageLocation": "default",
+                                "typeDescriptions": {
+                                    "typeIdentifier": "t_uint256",
+                                    "typeString": "uint256"
+                                },
+                                "typeName": {
+                                    "id": 566,
+                                    "name": "uint",
+                                    "nodeType": "ElementaryTypeName",
+                                    "src": "344:4:5",
+                                    "typeDescriptions": {
+                                        "typeIdentifier": "t_uint256",
+                                        "typeString": "uint256"
+                                    }
+                                },
+                                "visibility": "internal"
+                            },
+                            {
+                                "constant": false,
+                                "id": 569,
+                                "mutability": "mutable",
+                                "name": "paymentsIndexKey",
+                                "nodeType": "VariableDeclaration",
+                                "scope": 575,
+                                "src": "387:21:5",
+                                "stateVariable": false,
+                                "storageLocation": "default",
+                                "typeDescriptions": {
+                                    "typeIdentifier": "t_uint256",
+                                    "typeString": "uint256"
+                                },
+                                "typeName": {
+                                    "id": 568,
+                                    "name": "uint",
+                                    "nodeType": "ElementaryTypeName",
+                                    "src": "387:4:5",
+                                    "typeDescriptions": {
+                                        "typeIdentifier": "t_uint256",
+                                        "typeString": "uint256"
+                                    }
+                                },
+                                "visibility": "internal"
+                            },
+                            {
+                                "constant": false,
+                                "id": 574,
+                                "mutability": "mutable",
+                                "name": "payments",
+                                "nodeType": "VariableDeclaration",
+                                "scope": 575,
+                                "src": "784:33:5",
+                                "stateVariable": false,
+                                "storageLocation": "default",
+                                "typeDescriptions": {
+                                    "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Payment_$565_storage_$",
+                                    "typeString": "mapping(uint256 => struct Structs.Payment)"
+                                },
+                                "typeName": {
+                                    "id": 573,
+                                    "keyType": {
+                                        "id": 570,
+                                        "name": "uint",
+                                        "nodeType": "ElementaryTypeName",
+                                        "src": "792:4:5",
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_uint256",
+                                            "typeString": "uint256"
+                                        }
+                                    },
+                                    "nodeType": "Mapping",
+                                    "src": "784:24:5",
+                                    "typeDescriptions": {
+                                        "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Payment_$565_storage_$",
+                                        "typeString": "mapping(uint256 => struct Structs.Payment)"
+                                    },
+                                    "valueType": {
+                                        "id": 572,
+                                        "nodeType": "UserDefinedTypeName",
+                                        "pathNode": {
+                                            "id": 571,
+                                            "name": "Payment",
+                                            "nodeType": "IdentifierPath",
+                                            "referencedDeclaration": 565,
+                                            "src": "800:7:5"
+                                        },
+                                        "referencedDeclaration": 565,
+                                        "src": "800:7:5",
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_struct$_Payment_$565_storage_ptr",
+                                            "typeString": "struct Structs.Payment"
+                                        }
+                                    }
+                                },
+                                "visibility": "internal"
+                            }
+                        ],
+                        "name": "Balance",
+                        "nodeType": "StructDefinition",
+                        "scope": 702,
+                        "src": "319:505:5",
+                        "visibility": "public"
+                    },
+                    {
+                        "constant": false,
+                        "functionSelector": "d18a42e1",
+                        "id": 580,
+                        "mutability": "mutable",
+                        "name": "balanceReceived",
+                        "nodeType": "VariableDeclaration",
+                        "scope": 702,
+                        "src": "979:50:5",
+                        "stateVariable": true,
+                        "storageLocation": "default",
+                        "typeDescriptions": {
+                            "typeIdentifier": "t_mapping$_t_address_$_t_struct$_Balance_$575_storage_$",
+                            "typeString": "mapping(address => struct Structs.Balance)"
+                        },
+                        "typeName": {
+                            "id": 579,
+                            "keyType": {
+                                "id": 576,
+                                "name": "address",
+                                "nodeType": "ElementaryTypeName",
+                                "src": "987:7:5",
+                                "typeDescriptions": {
+                                    "typeIdentifier": "t_address",
+                                    "typeString": "address"
+                                }
+                            },
+                            "nodeType": "Mapping",
+                            "src": "979:27:5",
+                            "typeDescriptions": {
+                                "typeIdentifier": "t_mapping$_t_address_$_t_struct$_Balance_$575_storage_$",
+                                "typeString": "mapping(address => struct Structs.Balance)"
+                            },
+                            "valueType": {
+                                "id": 578,
+                                "nodeType": "UserDefinedTypeName",
+                                "pathNode": {
+                                    "id": 577,
+                                    "name": "Balance",
+                                    "nodeType": "IdentifierPath",
+                                    "referencedDeclaration": 575,
+                                    "src": "998:7:5"
+                                },
+                                "referencedDeclaration": 575,
+                                "src": "998:7:5",
+                                "typeDescriptions": {
+                                    "typeIdentifier": "t_struct$_Balance_$575_storage_ptr",
+                                    "typeString": "struct Structs.Balance"
+                                }
+                            }
+                        },
+                        "visibility": "public"
+                    },
+                    {
+                        "body": {
+                            "id": 591,
+                            "nodeType": "Block",
+                            "src": "1093:176:5",
+                            "statements": [
+                                {
+                                    "expression": {
+                                        "expression": {
+                                            "arguments": [
+                                                {
+                                                    "id": 587,
+                                                    "name": "this",
+                                                    "nodeType": "Identifier",
+                                                    "overloadedDeclarations": [],
+                                                    "referencedDeclaration": 4294967268,
+                                                    "src": "1249:4:5",
+                                                    "typeDescriptions": {
+                                                        "typeIdentifier": "t_contract$_Structs_$702",
+                                                        "typeString": "contract Structs"
+                                                    }
+                                                }
+                                            ],
+                                            "expression": {
+                                                "argumentTypes": [
+                                                    {
+                                                        "typeIdentifier": "t_contract$_Structs_$702",
+                                                        "typeString": "contract Structs"
+                                                    }
+                                                ],
+                                                "id": 586,
+                                                "isConstant": false,
+                                                "isLValue": false,
+                                                "isPure": true,
+                                                "lValueRequested": false,
+                                                "nodeType": "ElementaryTypeNameExpression",
+                                                "src": "1241:7:5",
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_type$_t_address_$",
+                                                    "typeString": "type(address)"
+                                                },
+                                                "typeName": {
+                                                    "id": 585,
+                                                    "name": "address",
+                                                    "nodeType": "ElementaryTypeName",
+                                                    "src": "1241:7:5",
+                                                    "typeDescriptions": {}
+                                                }
+                                            },
+                                            "id": 588,
+                                            "isConstant": false,
+                                            "isLValue": false,
+                                            "isPure": false,
+                                            "kind": "typeConversion",
+                                            "lValueRequested": false,
+                                            "names": [],
+                                            "nodeType": "FunctionCall",
+                                            "src": "1241:13:5",
+                                            "tryCall": false,
+                                            "typeDescriptions": {
+                                                "typeIdentifier": "t_address",
+                                                "typeString": "address"
+                                            }
+                                        },
+                                        "id": 589,
+                                        "isConstant": false,
+                                        "isLValue": false,
+                                        "isPure": false,
+                                        "lValueRequested": false,
+                                        "memberName": "balance",
+                                        "nodeType": "MemberAccess",
+                                        "src": "1241:21:5",
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_uint256",
+                                            "typeString": "uint256"
+                                        }
+                                    },
+                                    "functionReturnParameters": 584,
+                                    "id": 590,
+                                    "nodeType": "Return",
+                                    "src": "1234:28:5"
+                                }
+                            ]
+                        },
+                        "functionSelector": "12065fe0",
+                        "id": 592,
+                        "implemented": true,
+                        "kind": "function",
+                        "modifiers": [],
+                        "name": "getBalance",
+                        "nodeType": "FunctionDefinition",
+                        "parameters": {
+                            "id": 581,
+                            "nodeType": "ParameterList",
+                            "parameters": [],
+                            "src": "1064:2:5"
+                        },
+                        "returnParameters": {
+                            "id": 584,
+                            "nodeType": "ParameterList",
+                            "parameters": [
+                                {
+                                    "constant": false,
+                                    "id": 583,
+                                    "mutability": "mutable",
+                                    "name": "",
+                                    "nodeType": "VariableDeclaration",
+                                    "scope": 592,
+                                    "src": "1087:4:5",
+                                    "stateVariable": false,
+                                    "storageLocation": "default",
+                                    "typeDescriptions": {
+                                        "typeIdentifier": "t_uint256",
+                                        "typeString": "uint256"
+                                    },
+                                    "typeName": {
+                                        "id": 582,
+                                        "name": "uint",
+                                        "nodeType": "ElementaryTypeName",
+                                        "src": "1087:4:5",
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_uint256",
+                                            "typeString": "uint256"
+                                        }
+                                    },
+                                    "visibility": "internal"
+                                }
+                            ],
+                            "src": "1086:6:5"
+                        },
+                        "scope": 702,
+                        "src": "1045:224:5",
+                        "stateMutability": "view",
+                        "virtual": false,
+                        "visibility": "public"
+                    },
+                    {
+                        "body": {
+                            "id": 639,
+                            "nodeType": "Block",
+                            "src": "1320:859:5",
+                            "statements": [
+                                {
+                                    "expression": {
+                                        "id": 602,
+                                        "isConstant": false,
+                                        "isLValue": false,
+                                        "isPure": false,
+                                        "lValueRequested": false,
+                                        "leftHandSide": {
+                                            "expression": {
+                                                "baseExpression": {
+                                                    "id": 595,
+                                                    "name": "balanceReceived",
+                                                    "nodeType": "Identifier",
+                                                    "overloadedDeclarations": [],
+                                                    "referencedDeclaration": 580,
+                                                    "src": "1408:15:5",
+                                                    "typeDescriptions": {
+                                                        "typeIdentifier": "t_mapping$_t_address_$_t_struct$_Balance_$575_storage_$",
+                                                        "typeString": "mapping(address => struct Structs.Balance storage ref)"
+                                                    }
+                                                },
+                                                "id": 598,
+                                                "indexExpression": {
+                                                    "expression": {
+                                                        "id": 596,
+                                                        "name": "msg",
+                                                        "nodeType": "Identifier",
+                                                        "overloadedDeclarations": [],
+                                                        "referencedDeclaration": 4294967281,
+                                                        "src": "1424:3:5",
+                                                        "typeDescriptions": {
+                                                            "typeIdentifier": "t_magic_message",
+                                                            "typeString": "msg"
+                                                        }
+                                                    },
+                                                    "id": 597,
+                                                    "isConstant": false,
+                                                    "isLValue": false,
+                                                    "isPure": false,
+                                                    "lValueRequested": false,
+                                                    "memberName": "sender",
+                                                    "nodeType": "MemberAccess",
+                                                    "src": "1424:10:5",
+                                                    "typeDescriptions": {
+                                                        "typeIdentifier": "t_address",
+                                                        "typeString": "address"
+                                                    }
+                                                },
+                                                "isConstant": false,
+                                                "isLValue": true,
+                                                "isPure": false,
+                                                "lValueRequested": false,
+                                                "nodeType": "IndexAccess",
+                                                "src": "1408:27:5",
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_struct$_Balance_$575_storage",
+                                                    "typeString": "struct Structs.Balance storage ref"
+                                                }
+                                            },
+                                            "id": 599,
+                                            "isConstant": false,
+                                            "isLValue": true,
+                                            "isPure": false,
+                                            "lValueRequested": true,
+                                            "memberName": "totalBalance",
+                                            "nodeType": "MemberAccess",
+                                            "referencedDeclaration": 567,
+                                            "src": "1408:40:5",
+                                            "typeDescriptions": {
+                                                "typeIdentifier": "t_uint256",
+                                                "typeString": "uint256"
+                                            }
+                                        },
+                                        "nodeType": "Assignment",
+                                        "operator": "+=",
+                                        "rightHandSide": {
+                                            "expression": {
+                                                "id": 600,
+                                                "name": "msg",
+                                                "nodeType": "Identifier",
+                                                "overloadedDeclarations": [],
+                                                "referencedDeclaration": 4294967281,
+                                                "src": "1452:3:5",
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_magic_message",
+                                                    "typeString": "msg"
+                                                }
+                                            },
+                                            "id": 601,
+                                            "isConstant": false,
+                                            "isLValue": false,
+                                            "isPure": false,
+                                            "lValueRequested": false,
+                                            "memberName": "value",
+                                            "nodeType": "MemberAccess",
+                                            "src": "1452:9:5",
+                                            "typeDescriptions": {
+                                                "typeIdentifier": "t_uint256",
+                                                "typeString": "uint256"
+                                            }
+                                        },
+                                        "src": "1408:53:5",
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_uint256",
+                                            "typeString": "uint256"
+                                        }
+                                    },
+                                    "id": 603,
+                                    "nodeType": "ExpressionStatement",
+                                    "src": "1408:53:5"
+                                },
+                                {
+                                    "assignments": [
+                                        606
+                                    ],
+                                    "declarations": [
+                                        {
+                                            "constant": false,
+                                            "id": 606,
+                                            "mutability": "mutable",
+                                            "name": "payment",
+                                            "nodeType": "VariableDeclaration",
+                                            "scope": 639,
+                                            "src": "1566:22:5",
+                                            "stateVariable": false,
+                                            "storageLocation": "memory",
+                                            "typeDescriptions": {
+                                                "typeIdentifier": "t_struct$_Payment_$565_memory_ptr",
+                                                "typeString": "struct Structs.Payment"
+                                            },
+                                            "typeName": {
+                                                "id": 605,
+                                                "nodeType": "UserDefinedTypeName",
+                                                "pathNode": {
+                                                    "id": 604,
+                                                    "name": "Payment",
+                                                    "nodeType": "IdentifierPath",
+                                                    "referencedDeclaration": 565,
+                                                    "src": "1566:7:5"
+                                                },
+                                                "referencedDeclaration": 565,
+                                                "src": "1566:7:5",
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_struct$_Payment_$565_storage_ptr",
+                                                    "typeString": "struct Structs.Payment"
+                                                }
+                                            },
+                                            "visibility": "internal"
+                                        }
+                                    ],
+                                    "id": 613,
+                                    "initialValue": {
+                                        "arguments": [
+                                            {
+                                                "expression": {
+                                                    "id": 608,
+                                                    "name": "msg",
+                                                    "nodeType": "Identifier",
+                                                    "overloadedDeclarations": [],
+                                                    "referencedDeclaration": 4294967281,
+                                                    "src": "1599:3:5",
+                                                    "typeDescriptions": {
+                                                        "typeIdentifier": "t_magic_message",
+                                                        "typeString": "msg"
+                                                    }
+                                                },
+                                                "id": 609,
+                                                "isConstant": false,
+                                                "isLValue": false,
+                                                "isPure": false,
+                                                "lValueRequested": false,
+                                                "memberName": "value",
+                                                "nodeType": "MemberAccess",
+                                                "src": "1599:9:5",
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_uint256",
+                                                    "typeString": "uint256"
+                                                }
+                                            },
+                                            {
+                                                "expression": {
+                                                    "id": 610,
+                                                    "name": "block",
+                                                    "nodeType": "Identifier",
+                                                    "overloadedDeclarations": [],
+                                                    "referencedDeclaration": 4294967292,
+                                                    "src": "1610:5:5",
+                                                    "typeDescriptions": {
+                                                        "typeIdentifier": "t_magic_block",
+                                                        "typeString": "block"
+                                                    }
+                                                },
+                                                "id": 611,
+                                                "isConstant": false,
+                                                "isLValue": false,
+                                                "isPure": false,
+                                                "lValueRequested": false,
+                                                "memberName": "timestamp",
+                                                "nodeType": "MemberAccess",
+                                                "src": "1610:15:5",
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_uint256",
+                                                    "typeString": "uint256"
+                                                }
+                                            }
+                                        ],
+                                        "expression": {
+                                            "argumentTypes": [
+                                                {
+                                                    "typeIdentifier": "t_uint256",
+                                                    "typeString": "uint256"
+                                                },
+                                                {
+                                                    "typeIdentifier": "t_uint256",
+                                                    "typeString": "uint256"
+                                                }
+                                            ],
+                                            "id": 607,
+                                            "name": "Payment",
+                                            "nodeType": "Identifier",
+                                            "overloadedDeclarations": [],
+                                            "referencedDeclaration": 565,
+                                            "src": "1591:7:5",
+                                            "typeDescriptions": {
+                                                "typeIdentifier": "t_type$_t_struct$_Payment_$565_storage_ptr_$",
+                                                "typeString": "type(struct Structs.Payment storage pointer)"
+                                            }
+                                        },
+                                        "id": 612,
+                                        "isConstant": false,
+                                        "isLValue": false,
+                                        "isPure": false,
+                                        "kind": "structConstructorCall",
+                                        "lValueRequested": false,
+                                        "names": [],
+                                        "nodeType": "FunctionCall",
+                                        "src": "1591:35:5",
+                                        "tryCall": false,
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_struct$_Payment_$565_memory_ptr",
+                                            "typeString": "struct Structs.Payment memory"
+                                        }
+                                    },
+                                    "nodeType": "VariableDeclarationStatement",
+                                    "src": "1566:60:5"
+                                },
+                                {
+                                    "assignments": [
+                                        615
+                                    ],
+                                    "declarations": [
+                                        {
+                                            "constant": false,
+                                            "id": 615,
+                                            "mutability": "mutable",
+                                            "name": "keyToUse",
+                                            "nodeType": "VariableDeclaration",
+                                            "scope": 639,
+                                            "src": "1990:13:5",
+                                            "stateVariable": false,
+                                            "storageLocation": "default",
+                                            "typeDescriptions": {
+                                                "typeIdentifier": "t_uint256",
+                                                "typeString": "uint256"
+                                            },
+                                            "typeName": {
+                                                "id": 614,
+                                                "name": "uint",
+                                                "nodeType": "ElementaryTypeName",
+                                                "src": "1990:4:5",
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_uint256",
+                                                    "typeString": "uint256"
+                                                }
+                                            },
+                                            "visibility": "internal"
+                                        }
+                                    ],
+                                    "id": 621,
+                                    "initialValue": {
+                                        "expression": {
+                                            "baseExpression": {
+                                                "id": 616,
+                                                "name": "balanceReceived",
+                                                "nodeType": "Identifier",
+                                                "overloadedDeclarations": [],
+                                                "referencedDeclaration": 580,
+                                                "src": "2006:15:5",
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_mapping$_t_address_$_t_struct$_Balance_$575_storage_$",
+                                                    "typeString": "mapping(address => struct Structs.Balance storage ref)"
+                                                }
+                                            },
+                                            "id": 619,
+                                            "indexExpression": {
+                                                "expression": {
+                                                    "id": 617,
+                                                    "name": "msg",
+                                                    "nodeType": "Identifier",
+                                                    "overloadedDeclarations": [],
+                                                    "referencedDeclaration": 4294967281,
+                                                    "src": "2022:3:5",
+                                                    "typeDescriptions": {
+                                                        "typeIdentifier": "t_magic_message",
+                                                        "typeString": "msg"
+                                                    }
+                                                },
+                                                "id": 618,
+                                                "isConstant": false,
+                                                "isLValue": false,
+                                                "isPure": false,
+                                                "lValueRequested": false,
+                                                "memberName": "sender",
+                                                "nodeType": "MemberAccess",
+                                                "src": "2022:10:5",
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_address",
+                                                    "typeString": "address"
+                                                }
+                                            },
+                                            "isConstant": false,
+                                            "isLValue": true,
+                                            "isPure": false,
+                                            "lValueRequested": false,
+                                            "nodeType": "IndexAccess",
+                                            "src": "2006:27:5",
+                                            "typeDescriptions": {
+                                                "typeIdentifier": "t_struct$_Balance_$575_storage",
+                                                "typeString": "struct Structs.Balance storage ref"
+                                            }
+                                        },
+                                        "id": 620,
+                                        "isConstant": false,
+                                        "isLValue": true,
+                                        "isPure": false,
+                                        "lValueRequested": false,
+                                        "memberName": "paymentsIndexKey",
+                                        "nodeType": "MemberAccess",
+                                        "referencedDeclaration": 569,
+                                        "src": "2006:44:5",
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_uint256",
+                                            "typeString": "uint256"
+                                        }
+                                    },
+                                    "nodeType": "VariableDeclarationStatement",
+                                    "src": "1990:60:5"
+                                },
+                                {
+                                    "expression": {
+                                        "id": 630,
+                                        "isConstant": false,
+                                        "isLValue": false,
+                                        "isPure": false,
+                                        "lValueRequested": false,
+                                        "leftHandSide": {
+                                            "baseExpression": {
+                                                "expression": {
+                                                    "baseExpression": {
+                                                        "id": 622,
+                                                        "name": "balanceReceived",
+                                                        "nodeType": "Identifier",
+                                                        "overloadedDeclarations": [],
+                                                        "referencedDeclaration": 580,
+                                                        "src": "2060:15:5",
+                                                        "typeDescriptions": {
+                                                            "typeIdentifier": "t_mapping$_t_address_$_t_struct$_Balance_$575_storage_$",
+                                                            "typeString": "mapping(address => struct Structs.Balance storage ref)"
+                                                        }
+                                                    },
+                                                    "id": 625,
+                                                    "indexExpression": {
+                                                        "expression": {
+                                                            "id": 623,
+                                                            "name": "msg",
+                                                            "nodeType": "Identifier",
+                                                            "overloadedDeclarations": [],
+                                                            "referencedDeclaration": 4294967281,
+                                                            "src": "2076:3:5",
+                                                            "typeDescriptions": {
+                                                                "typeIdentifier": "t_magic_message",
+                                                                "typeString": "msg"
+                                                            }
+                                                        },
+                                                        "id": 624,
+                                                        "isConstant": false,
+                                                        "isLValue": false,
+                                                        "isPure": false,
+                                                        "lValueRequested": false,
+                                                        "memberName": "sender",
+                                                        "nodeType": "MemberAccess",
+                                                        "src": "2076:10:5",
+                                                        "typeDescriptions": {
+                                                            "typeIdentifier": "t_address",
+                                                            "typeString": "address"
+                                                        }
+                                                    },
+                                                    "isConstant": false,
+                                                    "isLValue": true,
+                                                    "isPure": false,
+                                                    "lValueRequested": false,
+                                                    "nodeType": "IndexAccess",
+                                                    "src": "2060:27:5",
+                                                    "typeDescriptions": {
+                                                        "typeIdentifier": "t_struct$_Balance_$575_storage",
+                                                        "typeString": "struct Structs.Balance storage ref"
+                                                    }
+                                                },
+                                                "id": 626,
+                                                "isConstant": false,
+                                                "isLValue": true,
+                                                "isPure": false,
+                                                "lValueRequested": false,
+                                                "memberName": "payments",
+                                                "nodeType": "MemberAccess",
+                                                "referencedDeclaration": 574,
+                                                "src": "2060:36:5",
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Payment_$565_storage_$",
+                                                    "typeString": "mapping(uint256 => struct Structs.Payment storage ref)"
+                                                }
+                                            },
+                                            "id": 628,
+                                            "indexExpression": {
+                                                "id": 627,
+                                                "name": "keyToUse",
+                                                "nodeType": "Identifier",
+                                                "overloadedDeclarations": [],
+                                                "referencedDeclaration": 615,
+                                                "src": "2097:8:5",
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_uint256",
+                                                    "typeString": "uint256"
+                                                }
+                                            },
+                                            "isConstant": false,
+                                            "isLValue": true,
+                                            "isPure": false,
+                                            "lValueRequested": true,
+                                            "nodeType": "IndexAccess",
+                                            "src": "2060:46:5",
+                                            "typeDescriptions": {
+                                                "typeIdentifier": "t_struct$_Payment_$565_storage",
+                                                "typeString": "struct Structs.Payment storage ref"
+                                            }
+                                        },
+                                        "nodeType": "Assignment",
+                                        "operator": "=",
+                                        "rightHandSide": {
+                                            "id": 629,
+                                            "name": "payment",
+                                            "nodeType": "Identifier",
+                                            "overloadedDeclarations": [],
+                                            "referencedDeclaration": 606,
+                                            "src": "2109:7:5",
+                                            "typeDescriptions": {
+                                                "typeIdentifier": "t_struct$_Payment_$565_memory_ptr",
+                                                "typeString": "struct Structs.Payment memory"
+                                            }
+                                        },
+                                        "src": "2060:56:5",
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_struct$_Payment_$565_storage",
+                                            "typeString": "struct Structs.Payment storage ref"
+                                        }
+                                    },
+                                    "id": 631,
+                                    "nodeType": "ExpressionStatement",
+                                    "src": "2060:56:5"
+                                },
+                                {
+                                    "expression": {
+                                        "id": 637,
+                                        "isConstant": false,
+                                        "isLValue": false,
+                                        "isPure": false,
+                                        "lValueRequested": false,
+                                        "nodeType": "UnaryOperation",
+                                        "operator": "++",
+                                        "prefix": false,
+                                        "src": "2126:46:5",
+                                        "subExpression": {
+                                            "expression": {
+                                                "baseExpression": {
+                                                    "id": 632,
+                                                    "name": "balanceReceived",
+                                                    "nodeType": "Identifier",
+                                                    "overloadedDeclarations": [],
+                                                    "referencedDeclaration": 580,
+                                                    "src": "2126:15:5",
+                                                    "typeDescriptions": {
+                                                        "typeIdentifier": "t_mapping$_t_address_$_t_struct$_Balance_$575_storage_$",
+                                                        "typeString": "mapping(address => struct Structs.Balance storage ref)"
+                                                    }
+                                                },
+                                                "id": 635,
+                                                "indexExpression": {
+                                                    "expression": {
+                                                        "id": 633,
+                                                        "name": "msg",
+                                                        "nodeType": "Identifier",
+                                                        "overloadedDeclarations": [],
+                                                        "referencedDeclaration": 4294967281,
+                                                        "src": "2142:3:5",
+                                                        "typeDescriptions": {
+                                                            "typeIdentifier": "t_magic_message",
+                                                            "typeString": "msg"
+                                                        }
+                                                    },
+                                                    "id": 634,
+                                                    "isConstant": false,
+                                                    "isLValue": false,
+                                                    "isPure": false,
+                                                    "lValueRequested": false,
+                                                    "memberName": "sender",
+                                                    "nodeType": "MemberAccess",
+                                                    "src": "2142:10:5",
+                                                    "typeDescriptions": {
+                                                        "typeIdentifier": "t_address",
+                                                        "typeString": "address"
+                                                    }
+                                                },
+                                                "isConstant": false,
+                                                "isLValue": true,
+                                                "isPure": false,
+                                                "lValueRequested": false,
+                                                "nodeType": "IndexAccess",
+                                                "src": "2126:27:5",
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_struct$_Balance_$575_storage",
+                                                    "typeString": "struct Structs.Balance storage ref"
+                                                }
+                                            },
+                                            "id": 636,
+                                            "isConstant": false,
+                                            "isLValue": true,
+                                            "isPure": false,
+                                            "lValueRequested": true,
+                                            "memberName": "paymentsIndexKey",
+                                            "nodeType": "MemberAccess",
+                                            "referencedDeclaration": 569,
+                                            "src": "2126:44:5",
+                                            "typeDescriptions": {
+                                                "typeIdentifier": "t_uint256",
+                                                "typeString": "uint256"
+                                            }
+                                        },
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_uint256",
+                                            "typeString": "uint256"
+                                        }
+                                    },
+                                    "id": 638,
+                                    "nodeType": "ExpressionStatement",
+                                    "src": "2126:46:5"
+                                }
+                            ]
+                        },
+                        "functionSelector": "8d68cf59",
+                        "id": 640,
+                        "implemented": true,
+                        "kind": "function",
+                        "modifiers": [],
+                        "name": "sendFunds",
+                        "nodeType": "FunctionDefinition",
+                        "parameters": {
+                            "id": 593,
+                            "nodeType": "ParameterList",
+                            "parameters": [],
+                            "src": "1302:2:5"
+                        },
+                        "returnParameters": {
+                            "id": 594,
+                            "nodeType": "ParameterList",
+                            "parameters": [],
+                            "src": "1320:0:5"
+                        },
+                        "scope": 702,
+                        "src": "1284:895:5",
+                        "stateMutability": "payable",
+                        "virtual": false,
+                        "visibility": "public"
+                    },
+                    {
+                        "body": {
+                            "id": 667,
+                            "nodeType": "Block",
+                            "src": "2248:1107:5",
+                            "statements": [
+                                {
+                                    "assignments": [
+                                        646
+                                    ],
+                                    "declarations": [
+                                        {
+                                            "constant": false,
+                                            "id": 646,
+                                            "mutability": "mutable",
+                                            "name": "fundsToWithdraw",
+                                            "nodeType": "VariableDeclaration",
+                                            "scope": 667,
+                                            "src": "3192:20:5",
+                                            "stateVariable": false,
+                                            "storageLocation": "default",
+                                            "typeDescriptions": {
+                                                "typeIdentifier": "t_uint256",
+                                                "typeString": "uint256"
+                                            },
+                                            "typeName": {
+                                                "id": 645,
+                                                "name": "uint",
+                                                "nodeType": "ElementaryTypeName",
+                                                "src": "3192:4:5",
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_uint256",
+                                                    "typeString": "uint256"
+                                                }
+                                            },
+                                            "visibility": "internal"
+                                        }
+                                    ],
+                                    "id": 652,
+                                    "initialValue": {
+                                        "expression": {
+                                            "baseExpression": {
+                                                "id": 647,
+                                                "name": "balanceReceived",
+                                                "nodeType": "Identifier",
+                                                "overloadedDeclarations": [],
+                                                "referencedDeclaration": 580,
+                                                "src": "3215:15:5",
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_mapping$_t_address_$_t_struct$_Balance_$575_storage_$",
+                                                    "typeString": "mapping(address => struct Structs.Balance storage ref)"
+                                                }
+                                            },
+                                            "id": 650,
+                                            "indexExpression": {
+                                                "expression": {
+                                                    "id": 648,
+                                                    "name": "msg",
+                                                    "nodeType": "Identifier",
+                                                    "overloadedDeclarations": [],
+                                                    "referencedDeclaration": 4294967281,
+                                                    "src": "3231:3:5",
+                                                    "typeDescriptions": {
+                                                        "typeIdentifier": "t_magic_message",
+                                                        "typeString": "msg"
+                                                    }
+                                                },
+                                                "id": 649,
+                                                "isConstant": false,
+                                                "isLValue": false,
+                                                "isPure": false,
+                                                "lValueRequested": false,
+                                                "memberName": "sender",
+                                                "nodeType": "MemberAccess",
+                                                "src": "3231:10:5",
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_address",
+                                                    "typeString": "address"
+                                                }
+                                            },
+                                            "isConstant": false,
+                                            "isLValue": true,
+                                            "isPure": false,
+                                            "lValueRequested": false,
+                                            "nodeType": "IndexAccess",
+                                            "src": "3215:27:5",
+                                            "typeDescriptions": {
+                                                "typeIdentifier": "t_struct$_Balance_$575_storage",
+                                                "typeString": "struct Structs.Balance storage ref"
+                                            }
+                                        },
+                                        "id": 651,
+                                        "isConstant": false,
+                                        "isLValue": true,
+                                        "isPure": false,
+                                        "lValueRequested": false,
+                                        "memberName": "totalBalance",
+                                        "nodeType": "MemberAccess",
+                                        "referencedDeclaration": 567,
+                                        "src": "3215:40:5",
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_uint256",
+                                            "typeString": "uint256"
+                                        }
+                                    },
+                                    "nodeType": "VariableDeclarationStatement",
+                                    "src": "3192:63:5"
+                                },
+                                {
+                                    "expression": {
+                                        "id": 659,
+                                        "isConstant": false,
+                                        "isLValue": false,
+                                        "isPure": false,
+                                        "lValueRequested": false,
+                                        "leftHandSide": {
+                                            "expression": {
+                                                "baseExpression": {
+                                                    "id": 653,
+                                                    "name": "balanceReceived",
+                                                    "nodeType": "Identifier",
+                                                    "overloadedDeclarations": [],
+                                                    "referencedDeclaration": 580,
+                                                    "src": "3265:15:5",
+                                                    "typeDescriptions": {
+                                                        "typeIdentifier": "t_mapping$_t_address_$_t_struct$_Balance_$575_storage_$",
+                                                        "typeString": "mapping(address => struct Structs.Balance storage ref)"
+                                                    }
+                                                },
+                                                "id": 656,
+                                                "indexExpression": {
+                                                    "expression": {
+                                                        "id": 654,
+                                                        "name": "msg",
+                                                        "nodeType": "Identifier",
+                                                        "overloadedDeclarations": [],
+                                                        "referencedDeclaration": 4294967281,
+                                                        "src": "3281:3:5",
+                                                        "typeDescriptions": {
+                                                            "typeIdentifier": "t_magic_message",
+                                                            "typeString": "msg"
+                                                        }
+                                                    },
+                                                    "id": 655,
+                                                    "isConstant": false,
+                                                    "isLValue": false,
+                                                    "isPure": false,
+                                                    "lValueRequested": false,
+                                                    "memberName": "sender",
+                                                    "nodeType": "MemberAccess",
+                                                    "src": "3281:10:5",
+                                                    "typeDescriptions": {
+                                                        "typeIdentifier": "t_address",
+                                                        "typeString": "address"
+                                                    }
+                                                },
+                                                "isConstant": false,
+                                                "isLValue": true,
+                                                "isPure": false,
+                                                "lValueRequested": false,
+                                                "nodeType": "IndexAccess",
+                                                "src": "3265:27:5",
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_struct$_Balance_$575_storage",
+                                                    "typeString": "struct Structs.Balance storage ref"
+                                                }
+                                            },
+                                            "id": 657,
+                                            "isConstant": false,
+                                            "isLValue": true,
+                                            "isPure": false,
+                                            "lValueRequested": true,
+                                            "memberName": "totalBalance",
+                                            "nodeType": "MemberAccess",
+                                            "referencedDeclaration": 567,
+                                            "src": "3265:40:5",
+                                            "typeDescriptions": {
+                                                "typeIdentifier": "t_uint256",
+                                                "typeString": "uint256"
+                                            }
+                                        },
+                                        "nodeType": "Assignment",
+                                        "operator": "=",
+                                        "rightHandSide": {
+                                            "hexValue": "30",
+                                            "id": 658,
+                                            "isConstant": false,
+                                            "isLValue": false,
+                                            "isPure": true,
+                                            "kind": "number",
+                                            "lValueRequested": false,
+                                            "nodeType": "Literal",
+                                            "src": "3308:1:5",
+                                            "typeDescriptions": {
+                                                "typeIdentifier": "t_rational_0_by_1",
+                                                "typeString": "int_const 0"
+                                            },
+                                            "value": "0"
+                                        },
+                                        "src": "3265:44:5",
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_uint256",
+                                            "typeString": "uint256"
+                                        }
+                                    },
+                                    "id": 660,
+                                    "nodeType": "ExpressionStatement",
+                                    "src": "3265:44:5"
+                                },
+                                {
+                                    "expression": {
+                                        "arguments": [
+                                            {
+                                                "id": 664,
+                                                "name": "fundsToWithdraw",
+                                                "nodeType": "Identifier",
+                                                "overloadedDeclarations": [],
+                                                "referencedDeclaration": 646,
+                                                "src": "3332:15:5",
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_uint256",
+                                                    "typeString": "uint256"
+                                                }
+                                            }
+                                        ],
+                                        "expression": {
+                                            "argumentTypes": [
+                                                {
+                                                    "typeIdentifier": "t_uint256",
+                                                    "typeString": "uint256"
+                                                }
+                                            ],
+                                            "expression": {
+                                                "id": 661,
+                                                "name": "_to",
+                                                "nodeType": "Identifier",
+                                                "overloadedDeclarations": [],
+                                                "referencedDeclaration": 642,
+                                                "src": "3319:3:5",
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_address_payable",
+                                                    "typeString": "address payable"
+                                                }
+                                            },
+                                            "id": 663,
+                                            "isConstant": false,
+                                            "isLValue": false,
+                                            "isPure": false,
+                                            "lValueRequested": false,
+                                            "memberName": "transfer",
+                                            "nodeType": "MemberAccess",
+                                            "src": "3319:12:5",
+                                            "typeDescriptions": {
+                                                "typeIdentifier": "t_function_transfer_nonpayable$_t_uint256_$returns$__$",
+                                                "typeString": "function (uint256)"
+                                            }
+                                        },
+                                        "id": 665,
+                                        "isConstant": false,
+                                        "isLValue": false,
+                                        "isPure": false,
+                                        "kind": "functionCall",
+                                        "lValueRequested": false,
+                                        "names": [],
+                                        "nodeType": "FunctionCall",
+                                        "src": "3319:29:5",
+                                        "tryCall": false,
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_tuple$__$",
+                                            "typeString": "tuple()"
+                                        }
+                                    },
+                                    "id": 666,
+                                    "nodeType": "ExpressionStatement",
+                                    "src": "3319:29:5"
+                                }
+                            ]
+                        },
+                        "functionSelector": "32dee40b",
+                        "id": 668,
+                        "implemented": true,
+                        "kind": "function",
+                        "modifiers": [],
+                        "name": "withdrawAllFunds",
+                        "nodeType": "FunctionDefinition",
+                        "parameters": {
+                            "id": 643,
+                            "nodeType": "ParameterList",
+                            "parameters": [
+                                {
+                                    "constant": false,
+                                    "id": 642,
+                                    "mutability": "mutable",
+                                    "name": "_to",
+                                    "nodeType": "VariableDeclaration",
+                                    "scope": 668,
+                                    "src": "2220:19:5",
+                                    "stateVariable": false,
+                                    "storageLocation": "default",
+                                    "typeDescriptions": {
+                                        "typeIdentifier": "t_address_payable",
+                                        "typeString": "address payable"
+                                    },
+                                    "typeName": {
+                                        "id": 641,
+                                        "name": "address",
+                                        "nodeType": "ElementaryTypeName",
+                                        "src": "2220:15:5",
+                                        "stateMutability": "payable",
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_address_payable",
+                                            "typeString": "address payable"
+                                        }
+                                    },
+                                    "visibility": "internal"
+                                }
+                            ],
+                            "src": "2219:21:5"
+                        },
+                        "returnParameters": {
+                            "id": 644,
+                            "nodeType": "ParameterList",
+                            "parameters": [],
+                            "src": "2248:0:5"
+                        },
+                        "scope": 702,
+                        "src": "2194:1161:5",
+                        "stateMutability": "nonpayable",
+                        "virtual": false,
+                        "visibility": "public"
+                    },
+                    {
+                        "body": {
+                            "id": 700,
+                            "nodeType": "Block",
+                            "src": "3440:216:5",
+                            "statements": [
+                                {
+                                    "expression": {
+                                        "arguments": [
+                                            {
+                                                "commonType": {
+                                                    "typeIdentifier": "t_uint256",
+                                                    "typeString": "uint256"
+                                                },
+                                                "id": 682,
+                                                "isConstant": false,
+                                                "isLValue": false,
+                                                "isPure": false,
+                                                "lValueRequested": false,
+                                                "leftExpression": {
+                                                    "expression": {
+                                                        "baseExpression": {
+                                                            "id": 676,
+                                                            "name": "balanceReceived",
+                                                            "nodeType": "Identifier",
+                                                            "overloadedDeclarations": [],
+                                                            "referencedDeclaration": 580,
+                                                            "src": "3458:15:5",
+                                                            "typeDescriptions": {
+                                                                "typeIdentifier": "t_mapping$_t_address_$_t_struct$_Balance_$575_storage_$",
+                                                                "typeString": "mapping(address => struct Structs.Balance storage ref)"
+                                                            }
+                                                        },
+                                                        "id": 679,
+                                                        "indexExpression": {
+                                                            "expression": {
+                                                                "id": 677,
+                                                                "name": "msg",
+                                                                "nodeType": "Identifier",
+                                                                "overloadedDeclarations": [],
+                                                                "referencedDeclaration": 4294967281,
+                                                                "src": "3474:3:5",
+                                                                "typeDescriptions": {
+                                                                    "typeIdentifier": "t_magic_message",
+                                                                    "typeString": "msg"
+                                                                }
+                                                            },
+                                                            "id": 678,
+                                                            "isConstant": false,
+                                                            "isLValue": false,
+                                                            "isPure": false,
+                                                            "lValueRequested": false,
+                                                            "memberName": "sender",
+                                                            "nodeType": "MemberAccess",
+                                                            "src": "3474:10:5",
+                                                            "typeDescriptions": {
+                                                                "typeIdentifier": "t_address",
+                                                                "typeString": "address"
+                                                            }
+                                                        },
+                                                        "isConstant": false,
+                                                        "isLValue": true,
+                                                        "isPure": false,
+                                                        "lValueRequested": false,
+                                                        "nodeType": "IndexAccess",
+                                                        "src": "3458:27:5",
+                                                        "typeDescriptions": {
+                                                            "typeIdentifier": "t_struct$_Balance_$575_storage",
+                                                            "typeString": "struct Structs.Balance storage ref"
+                                                        }
+                                                    },
+                                                    "id": 680,
+                                                    "isConstant": false,
+                                                    "isLValue": true,
+                                                    "isPure": false,
+                                                    "lValueRequested": false,
+                                                    "memberName": "totalBalance",
+                                                    "nodeType": "MemberAccess",
+                                                    "referencedDeclaration": 567,
+                                                    "src": "3458:40:5",
+                                                    "typeDescriptions": {
+                                                        "typeIdentifier": "t_uint256",
+                                                        "typeString": "uint256"
+                                                    }
+                                                },
+                                                "nodeType": "BinaryOperation",
+                                                "operator": ">=",
+                                                "rightExpression": {
+                                                    "id": 681,
+                                                    "name": "_amount",
+                                                    "nodeType": "Identifier",
+                                                    "overloadedDeclarations": [],
+                                                    "referencedDeclaration": 672,
+                                                    "src": "3502:7:5",
+                                                    "typeDescriptions": {
+                                                        "typeIdentifier": "t_uint256",
+                                                        "typeString": "uint256"
+                                                    }
+                                                },
+                                                "src": "3458:51:5",
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_bool",
+                                                    "typeString": "bool"
+                                                }
+                                            },
+                                            {
+                                                "hexValue": "596f7520646f6e2774206861766520656e6f7567682066756e647320696e20796f7572206163636f756e74",
+                                                "id": 683,
+                                                "isConstant": false,
+                                                "isLValue": false,
+                                                "isPure": true,
+                                                "kind": "string",
+                                                "lValueRequested": false,
+                                                "nodeType": "Literal",
+                                                "src": "3511:45:5",
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_stringliteral_ef5de683cc46dd410b1f45747ef06dd2e3e1f896065e879d7dae98f14af002c7",
+                                                    "typeString": "literal_string \"You don't have enough funds in your account\""
+                                                },
+                                                "value": "You don't have enough funds in your account"
+                                            }
+                                        ],
+                                        "expression": {
+                                            "argumentTypes": [
+                                                {
+                                                    "typeIdentifier": "t_bool",
+                                                    "typeString": "bool"
+                                                },
+                                                {
+                                                    "typeIdentifier": "t_stringliteral_ef5de683cc46dd410b1f45747ef06dd2e3e1f896065e879d7dae98f14af002c7",
+                                                    "typeString": "literal_string \"You don't have enough funds in your account\""
+                                                }
+                                            ],
+                                            "id": 675,
+                                            "name": "require",
+                                            "nodeType": "Identifier",
+                                            "overloadedDeclarations": [
+                                                4294967278,
+                                                4294967278
+                                            ],
+                                            "referencedDeclaration": 4294967278,
+                                            "src": "3450:7:5",
+                                            "typeDescriptions": {
+                                                "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
+                                                "typeString": "function (bool,string memory) pure"
+                                            }
+                                        },
+                                        "id": 684,
+                                        "isConstant": false,
+                                        "isLValue": false,
+                                        "isPure": false,
+                                        "kind": "functionCall",
+                                        "lValueRequested": false,
+                                        "names": [],
+                                        "nodeType": "FunctionCall",
+                                        "src": "3450:107:5",
+                                        "tryCall": false,
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_tuple$__$",
+                                            "typeString": "tuple()"
+                                        }
+                                    },
+                                    "id": 685,
+                                    "nodeType": "ExpressionStatement",
+                                    "src": "3450:107:5"
+                                },
+                                {
+                                    "expression": {
+                                        "id": 692,
+                                        "isConstant": false,
+                                        "isLValue": false,
+                                        "isPure": false,
+                                        "lValueRequested": false,
+                                        "leftHandSide": {
+                                            "expression": {
+                                                "baseExpression": {
+                                                    "id": 686,
+                                                    "name": "balanceReceived",
+                                                    "nodeType": "Identifier",
+                                                    "overloadedDeclarations": [],
+                                                    "referencedDeclaration": 580,
+                                                    "src": "3567:15:5",
+                                                    "typeDescriptions": {
+                                                        "typeIdentifier": "t_mapping$_t_address_$_t_struct$_Balance_$575_storage_$",
+                                                        "typeString": "mapping(address => struct Structs.Balance storage ref)"
+                                                    }
+                                                },
+                                                "id": 689,
+                                                "indexExpression": {
+                                                    "expression": {
+                                                        "id": 687,
+                                                        "name": "msg",
+                                                        "nodeType": "Identifier",
+                                                        "overloadedDeclarations": [],
+                                                        "referencedDeclaration": 4294967281,
+                                                        "src": "3583:3:5",
+                                                        "typeDescriptions": {
+                                                            "typeIdentifier": "t_magic_message",
+                                                            "typeString": "msg"
+                                                        }
+                                                    },
+                                                    "id": 688,
+                                                    "isConstant": false,
+                                                    "isLValue": false,
+                                                    "isPure": false,
+                                                    "lValueRequested": false,
+                                                    "memberName": "sender",
+                                                    "nodeType": "MemberAccess",
+                                                    "src": "3583:10:5",
+                                                    "typeDescriptions": {
+                                                        "typeIdentifier": "t_address",
+                                                        "typeString": "address"
+                                                    }
+                                                },
+                                                "isConstant": false,
+                                                "isLValue": true,
+                                                "isPure": false,
+                                                "lValueRequested": false,
+                                                "nodeType": "IndexAccess",
+                                                "src": "3567:27:5",
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_struct$_Balance_$575_storage",
+                                                    "typeString": "struct Structs.Balance storage ref"
+                                                }
+                                            },
+                                            "id": 690,
+                                            "isConstant": false,
+                                            "isLValue": true,
+                                            "isPure": false,
+                                            "lValueRequested": true,
+                                            "memberName": "totalBalance",
+                                            "nodeType": "MemberAccess",
+                                            "referencedDeclaration": 567,
+                                            "src": "3567:40:5",
+                                            "typeDescriptions": {
+                                                "typeIdentifier": "t_uint256",
+                                                "typeString": "uint256"
+                                            }
+                                        },
+                                        "nodeType": "Assignment",
+                                        "operator": "-=",
+                                        "rightHandSide": {
+                                            "id": 691,
+                                            "name": "_amount",
+                                            "nodeType": "Identifier",
+                                            "overloadedDeclarations": [],
+                                            "referencedDeclaration": 672,
+                                            "src": "3611:7:5",
+                                            "typeDescriptions": {
+                                                "typeIdentifier": "t_uint256",
+                                                "typeString": "uint256"
+                                            }
+                                        },
+                                        "src": "3567:51:5",
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_uint256",
+                                            "typeString": "uint256"
+                                        }
+                                    },
+                                    "id": 693,
+                                    "nodeType": "ExpressionStatement",
+                                    "src": "3567:51:5"
+                                },
+                                {
+                                    "expression": {
+                                        "arguments": [
+                                            {
+                                                "id": 697,
+                                                "name": "_amount",
+                                                "nodeType": "Identifier",
+                                                "overloadedDeclarations": [],
+                                                "referencedDeclaration": 672,
+                                                "src": "3641:7:5",
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_uint256",
+                                                    "typeString": "uint256"
+                                                }
+                                            }
+                                        ],
+                                        "expression": {
+                                            "argumentTypes": [
+                                                {
+                                                    "typeIdentifier": "t_uint256",
+                                                    "typeString": "uint256"
+                                                }
+                                            ],
+                                            "expression": {
+                                                "id": 694,
+                                                "name": "_to",
+                                                "nodeType": "Identifier",
+                                                "overloadedDeclarations": [],
+                                                "referencedDeclaration": 670,
+                                                "src": "3628:3:5",
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_address_payable",
+                                                    "typeString": "address payable"
+                                                }
+                                            },
+                                            "id": 696,
+                                            "isConstant": false,
+                                            "isLValue": false,
+                                            "isPure": false,
+                                            "lValueRequested": false,
+                                            "memberName": "transfer",
+                                            "nodeType": "MemberAccess",
+                                            "src": "3628:12:5",
+                                            "typeDescriptions": {
+                                                "typeIdentifier": "t_function_transfer_nonpayable$_t_uint256_$returns$__$",
+                                                "typeString": "function (uint256)"
+                                            }
+                                        },
+                                        "id": 698,
+                                        "isConstant": false,
+                                        "isLValue": false,
+                                        "isPure": false,
+                                        "kind": "functionCall",
+                                        "lValueRequested": false,
+                                        "names": [],
+                                        "nodeType": "FunctionCall",
+                                        "src": "3628:21:5",
+                                        "tryCall": false,
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_tuple$__$",
+                                            "typeString": "tuple()"
+                                        }
+                                    },
+                                    "id": 699,
+                                    "nodeType": "ExpressionStatement",
+                                    "src": "3628:21:5"
+                                }
+                            ]
+                        },
+                        "functionSelector": "c1075329",
+                        "id": 701,
+                        "implemented": true,
+                        "kind": "function",
+                        "modifiers": [],
+                        "name": "withdrawFunds",
+                        "nodeType": "FunctionDefinition",
+                        "parameters": {
+                            "id": 673,
+                            "nodeType": "ParameterList",
+                            "parameters": [
+                                {
+                                    "constant": false,
+                                    "id": 670,
+                                    "mutability": "mutable",
+                                    "name": "_to",
+                                    "nodeType": "VariableDeclaration",
+                                    "scope": 701,
+                                    "src": "3398:19:5",
+                                    "stateVariable": false,
+                                    "storageLocation": "default",
+                                    "typeDescriptions": {
+                                        "typeIdentifier": "t_address_payable",
+                                        "typeString": "address payable"
+                                    },
+                                    "typeName": {
+                                        "id": 669,
+                                        "name": "address",
+                                        "nodeType": "ElementaryTypeName",
+                                        "src": "3398:15:5",
+                                        "stateMutability": "payable",
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_address_payable",
+                                            "typeString": "address payable"
+                                        }
+                                    },
+                                    "visibility": "internal"
+                                },
+                                {
+                                    "constant": false,
+                                    "id": 672,
+                                    "mutability": "mutable",
+                                    "name": "_amount",
+                                    "nodeType": "VariableDeclaration",
+                                    "scope": 701,
+                                    "src": "3419:12:5",
+                                    "stateVariable": false,
+                                    "storageLocation": "default",
+                                    "typeDescriptions": {
+                                        "typeIdentifier": "t_uint256",
+                                        "typeString": "uint256"
+                                    },
+                                    "typeName": {
+                                        "id": 671,
+                                        "name": "uint",
+                                        "nodeType": "ElementaryTypeName",
+                                        "src": "3419:4:5",
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_uint256",
+                                            "typeString": "uint256"
+                                        }
+                                    },
+                                    "visibility": "internal"
+                                }
+                            ],
+                            "src": "3397:35:5"
+                        },
+                        "returnParameters": {
+                            "id": 674,
+                            "nodeType": "ParameterList",
+                            "parameters": [],
+                            "src": "3440:0:5"
+                        },
+                        "scope": 702,
+                        "src": "3375:281:5",
+                        "stateMutability": "nonpayable",
+                        "virtual": false,
+                        "visibility": "public"
+                    }
+                ],
+                "scope": 703,
+                "src": "214:3444:5"
+            }
+        ],
+        "src": "36:3625:5"
+    },
+    "functionHashes": {
+        "balanceReceived(address)": "d18a42e1",
+        "getBalance()": "12065fe0",
+        "sendFunds()": "8d68cf59",
+        "withdrawAllFunds(address)": "32dee40b",
+        "withdrawFunds(address,uint256)": "c1075329"
+    },
+    "gasEstimates": {
+        "creation": {
+            "codeDepositCost": "196400",
+            "executionCost": "238",
+            "totalCost": "196638"
+        },
+        "external": {
+            "balanceReceived(address)": "2148",
+            "getBalance()": "208",
+            "sendFunds()": "83091",
+            "withdrawAllFunds(address)": "infinite",
+            "withdrawFunds(address,uint256)": "infinite"
+        }
+    }
+}
