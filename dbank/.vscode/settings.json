@@ -1,0 +1,6 @@
+{
+  "solidity.defaultCompiler": "remote",
+  "editor.fontSize": 15,
+  "editor.cursorWidth": 1,
+  "solidity-va.uml.options": null
+}
