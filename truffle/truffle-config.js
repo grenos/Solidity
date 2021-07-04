@@ -18,11 +18,18 @@
  *
  */
 
-// const HDWalletProvider = require('@truffle/hdwallet-provider');
+const HDWalletProvider = require("@truffle/hdwallet-provider");
+const address = "0xF24795E3088d0f990a119416fF748C01D5a637fe";
+const privateKey =
+  "f7815fdd4fce8c9c8fc5845de7456108b92d25afe241cd09aaf8c3561504f951";
+const infuraUrl =
+  "https://rinkeby.infura.io/v3/c614036d5aea47689a8c116e97428b73";
 // const infuraKey = "fj4jll3k.....";
 //
 // const fs = require('fs');
 // const mnemonic = fs.readFileSync(".secret").toString().trim();
+
+const provider = new HDWalletProvider(privateKey, infuraUrl);
 
 module.exports = {
   /**
@@ -66,6 +73,14 @@ module.exports = {
     // timeoutBlocks: 200,  // # of blocks before a deployment times out  (minimum/default: 50)
     // skipDryRun: true     // Skip dry run before migrations? (default: false for public nets )
     // },
+    rinkeby: {
+      provider: () => provider,
+      network_id: 4, // rinkeby's id
+      // gas: 5500000, // Ropsten has a lower block limit than mainnet
+      // confirmations: 2, // # of confs to wait between deployments. (default: 0)
+      // timeoutBlocks: 200, // # of blocks before a deployment times out  (minimum/default: 50)
+      // skipDryRun: true, // Skip dry run before migrations? (default: false for public nets )
+    },
     // Useful for private networks
     // private: {
     // provider: () => new HDWalletProvider(mnemonic, `https://network.io`),
@@ -91,7 +106,7 @@ module.exports = {
       //  },
       //  evmVersion: "byzantium"
       // }
-    }
+    },
   },
 
   // Truffle DB is currently disabled by default; to enable it, change enabled: false to enabled: true
@@ -101,6 +116,6 @@ module.exports = {
   // $ truffle migrate --reset --compile-all
 
   db: {
-    enabled: false
-  }
+    enabled: false,
+  },
 };
