@@ -1,0 +1,605 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7DAD6ECD2695BFD300541A84 /* rsvp_stakingApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DAD6ECC2695BFD300541A84 /* rsvp_stakingApp.swift */; };
+		7DAD6ECF2695BFD300541A84 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DAD6ECE2695BFD300541A84 /* ContentView.swift */; };
+		7DAD6ED12695BFD400541A84 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7DAD6ED02695BFD400541A84 /* Assets.xcassets */; };
+		7DAD6ED42695BFD400541A84 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7DAD6ED32695BFD400541A84 /* Preview Assets.xcassets */; };
+		7DAD6EDF2695BFD400541A84 /* rsvp_stakingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DAD6EDE2695BFD400541A84 /* rsvp_stakingTests.swift */; };
+		7DAD6EEA2695BFD400541A84 /* rsvp_stakingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DAD6EE92695BFD400541A84 /* rsvp_stakingUITests.swift */; };
+		7DD982062695C28C0057EF4C /* Wallet_Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD982052695C28C0057EF4C /* Wallet_Model.swift */; };
+		7DD982082695C2A10057EF4C /* Token_Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD982072695C2A10057EF4C /* Token_Model.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7DAD6EDB2695BFD400541A84 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7DAD6EC12695BFD300541A84 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7DAD6EC82695BFD300541A84;
+			remoteInfo = rsvp_staking;
+		};
+		7DAD6EE62695BFD400541A84 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7DAD6EC12695BFD300541A84 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7DAD6EC82695BFD300541A84;
+			remoteInfo = rsvp_staking;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		7DAD6EC92695BFD300541A84 /* rsvp_staking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = rsvp_staking.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7DAD6ECC2695BFD300541A84 /* rsvp_stakingApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = rsvp_stakingApp.swift; sourceTree = "<group>"; };
+		7DAD6ECE2695BFD300541A84 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		7DAD6ED02695BFD400541A84 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7DAD6ED32695BFD400541A84 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		7DAD6ED52695BFD400541A84 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7DAD6EDA2695BFD400541A84 /* rsvp_stakingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = rsvp_stakingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7DAD6EDE2695BFD400541A84 /* rsvp_stakingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = rsvp_stakingTests.swift; sourceTree = "<group>"; };
+		7DAD6EE02695BFD400541A84 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7DAD6EE52695BFD400541A84 /* rsvp_stakingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = rsvp_stakingUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7DAD6EE92695BFD400541A84 /* rsvp_stakingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = rsvp_stakingUITests.swift; sourceTree = "<group>"; };
+		7DAD6EEB2695BFD400541A84 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7DD982052695C28C0057EF4C /* Wallet_Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wallet_Model.swift; sourceTree = "<group>"; };
+		7DD982072695C2A10057EF4C /* Token_Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Token_Model.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7DAD6EC62695BFD300541A84 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7DAD6ED72695BFD400541A84 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7DAD6EE22695BFD400541A84 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7DAD6EC02695BFD300541A84 = {
+			isa = PBXGroup;
+			children = (
+				7DAD6ECB2695BFD300541A84 /* rsvp_staking */,
+				7DAD6EDD2695BFD400541A84 /* rsvp_stakingTests */,
+				7DAD6EE82695BFD400541A84 /* rsvp_stakingUITests */,
+				7DAD6ECA2695BFD300541A84 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7DAD6ECA2695BFD300541A84 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7DAD6EC92695BFD300541A84 /* rsvp_staking.app */,
+				7DAD6EDA2695BFD400541A84 /* rsvp_stakingTests.xctest */,
+				7DAD6EE52695BFD400541A84 /* rsvp_stakingUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7DAD6ECB2695BFD300541A84 /* rsvp_staking */ = {
+			isa = PBXGroup;
+			children = (
+				7DD982042695C2720057EF4C /* Models */,
+				7DAD6ECC2695BFD300541A84 /* rsvp_stakingApp.swift */,
+				7DAD6ECE2695BFD300541A84 /* ContentView.swift */,
+				7DAD6ED02695BFD400541A84 /* Assets.xcassets */,
+				7DAD6ED52695BFD400541A84 /* Info.plist */,
+				7DAD6ED22695BFD400541A84 /* Preview Content */,
+			);
+			path = rsvp_staking;
+			sourceTree = "<group>";
+		};
+		7DAD6ED22695BFD400541A84 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				7DAD6ED32695BFD400541A84 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		7DAD6EDD2695BFD400541A84 /* rsvp_stakingTests */ = {
+			isa = PBXGroup;
+			children = (
+				7DAD6EDE2695BFD400541A84 /* rsvp_stakingTests.swift */,
+				7DAD6EE02695BFD400541A84 /* Info.plist */,
+			);
+			path = rsvp_stakingTests;
+			sourceTree = "<group>";
+		};
+		7DAD6EE82695BFD400541A84 /* rsvp_stakingUITests */ = {
+			isa = PBXGroup;
+			children = (
+				7DAD6EE92695BFD400541A84 /* rsvp_stakingUITests.swift */,
+				7DAD6EEB2695BFD400541A84 /* Info.plist */,
+			);
+			path = rsvp_stakingUITests;
+			sourceTree = "<group>";
+		};
+		7DD982042695C2720057EF4C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				7DD982052695C28C0057EF4C /* Wallet_Model.swift */,
+				7DD982072695C2A10057EF4C /* Token_Model.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7DAD6EC82695BFD300541A84 /* rsvp_staking */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7DAD6EEE2695BFD400541A84 /* Build configuration list for PBXNativeTarget "rsvp_staking" */;
+			buildPhases = (
+				7DAD6EC52695BFD300541A84 /* Sources */,
+				7DAD6EC62695BFD300541A84 /* Frameworks */,
+				7DAD6EC72695BFD300541A84 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = rsvp_staking;
+			packageProductDependencies = (
+			);
+			productName = rsvp_staking;
+			productReference = 7DAD6EC92695BFD300541A84 /* rsvp_staking.app */;
+			productType = "com.apple.product-type.application";
+		};
+		7DAD6ED92695BFD400541A84 /* rsvp_stakingTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7DAD6EF12695BFD400541A84 /* Build configuration list for PBXNativeTarget "rsvp_stakingTests" */;
+			buildPhases = (
+				7DAD6ED62695BFD400541A84 /* Sources */,
+				7DAD6ED72695BFD400541A84 /* Frameworks */,
+				7DAD6ED82695BFD400541A84 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7DAD6EDC2695BFD400541A84 /* PBXTargetDependency */,
+			);
+			name = rsvp_stakingTests;
+			productName = rsvp_stakingTests;
+			productReference = 7DAD6EDA2695BFD400541A84 /* rsvp_stakingTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		7DAD6EE42695BFD400541A84 /* rsvp_stakingUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7DAD6EF42695BFD400541A84 /* Build configuration list for PBXNativeTarget "rsvp_stakingUITests" */;
+			buildPhases = (
+				7DAD6EE12695BFD400541A84 /* Sources */,
+				7DAD6EE22695BFD400541A84 /* Frameworks */,
+				7DAD6EE32695BFD400541A84 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7DAD6EE72695BFD400541A84 /* PBXTargetDependency */,
+			);
+			name = rsvp_stakingUITests;
+			productName = rsvp_stakingUITests;
+			productReference = 7DAD6EE52695BFD400541A84 /* rsvp_stakingUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7DAD6EC12695BFD300541A84 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1250;
+				LastUpgradeCheck = 1250;
+				TargetAttributes = {
+					7DAD6EC82695BFD300541A84 = {
+						CreatedOnToolsVersion = 12.5.1;
+					};
+					7DAD6ED92695BFD400541A84 = {
+						CreatedOnToolsVersion = 12.5.1;
+						TestTargetID = 7DAD6EC82695BFD300541A84;
+					};
+					7DAD6EE42695BFD400541A84 = {
+						CreatedOnToolsVersion = 12.5.1;
+						TestTargetID = 7DAD6EC82695BFD300541A84;
+					};
+				};
+			};
+			buildConfigurationList = 7DAD6EC42695BFD300541A84 /* Build configuration list for PBXProject "rsvp_staking" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 7DAD6EC02695BFD300541A84;
+			packageReferences = (
+			);
+			productRefGroup = 7DAD6ECA2695BFD300541A84 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7DAD6EC82695BFD300541A84 /* rsvp_staking */,
+				7DAD6ED92695BFD400541A84 /* rsvp_stakingTests */,
+				7DAD6EE42695BFD400541A84 /* rsvp_stakingUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7DAD6EC72695BFD300541A84 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7DAD6ED42695BFD400541A84 /* Preview Assets.xcassets in Resources */,
+				7DAD6ED12695BFD400541A84 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7DAD6ED82695BFD400541A84 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7DAD6EE32695BFD400541A84 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7DAD6EC52695BFD300541A84 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7DAD6ECF2695BFD300541A84 /* ContentView.swift in Sources */,
+				7DD982082695C2A10057EF4C /* Token_Model.swift in Sources */,
+				7DD982062695C28C0057EF4C /* Wallet_Model.swift in Sources */,
+				7DAD6ECD2695BFD300541A84 /* rsvp_stakingApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7DAD6ED62695BFD400541A84 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7DAD6EDF2695BFD400541A84 /* rsvp_stakingTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7DAD6EE12695BFD400541A84 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7DAD6EEA2695BFD400541A84 /* rsvp_stakingUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7DAD6EDC2695BFD400541A84 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7DAD6EC82695BFD300541A84 /* rsvp_staking */;
+			targetProxy = 7DAD6EDB2695BFD400541A84 /* PBXContainerItemProxy */;
+		};
+		7DAD6EE72695BFD400541A84 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7DAD6EC82695BFD300541A84 /* rsvp_staking */;
+			targetProxy = 7DAD6EE62695BFD400541A84 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		7DAD6EEC2695BFD400541A84 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		7DAD6EED2695BFD400541A84 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7DAD6EEF2695BFD400541A84 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"rsvp_staking/Preview Content\"";
+				DEVELOPMENT_TEAM = 49G6J767SP;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = rsvp_staking/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "io.github.grenos.rsvp-staking";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		7DAD6EF02695BFD400541A84 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"rsvp_staking/Preview Content\"";
+				DEVELOPMENT_TEAM = 49G6J767SP;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = rsvp_staking/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "io.github.grenos.rsvp-staking";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		7DAD6EF22695BFD400541A84 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 49G6J767SP;
+				INFOPLIST_FILE = rsvp_stakingTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "io.github.grenos.rsvp-stakingTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/rsvp_staking.app/rsvp_staking";
+			};
+			name = Debug;
+		};
+		7DAD6EF32695BFD400541A84 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 49G6J767SP;
+				INFOPLIST_FILE = rsvp_stakingTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "io.github.grenos.rsvp-stakingTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/rsvp_staking.app/rsvp_staking";
+			};
+			name = Release;
+		};
+		7DAD6EF52695BFD400541A84 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 49G6J767SP;
+				INFOPLIST_FILE = rsvp_stakingUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "io.github.grenos.rsvp-stakingUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = rsvp_staking;
+			};
+			name = Debug;
+		};
+		7DAD6EF62695BFD400541A84 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 49G6J767SP;
+				INFOPLIST_FILE = rsvp_stakingUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "io.github.grenos.rsvp-stakingUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = rsvp_staking;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7DAD6EC42695BFD300541A84 /* Build configuration list for PBXProject "rsvp_staking" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7DAD6EEC2695BFD400541A84 /* Debug */,
+				7DAD6EED2695BFD400541A84 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7DAD6EEE2695BFD400541A84 /* Build configuration list for PBXNativeTarget "rsvp_staking" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7DAD6EEF2695BFD400541A84 /* Debug */,
+				7DAD6EF02695BFD400541A84 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7DAD6EF12695BFD400541A84 /* Build configuration list for PBXNativeTarget "rsvp_stakingTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7DAD6EF22695BFD400541A84 /* Debug */,
+				7DAD6EF32695BFD400541A84 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7DAD6EF42695BFD400541A84 /* Build configuration list for PBXNativeTarget "rsvp_stakingUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7DAD6EF52695BFD400541A84 /* Debug */,
+				7DAD6EF62695BFD400541A84 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7DAD6EC12695BFD300541A84 /* Project object */;
+}
