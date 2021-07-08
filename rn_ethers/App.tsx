@@ -1,5 +1,11 @@
 import React, {useEffect, useState} from 'react';
-import {SafeAreaView, StatusBar, useColorScheme, Text} from 'react-native';
+import {
+  SafeAreaView,
+  StatusBar,
+  useColorScheme,
+  Text,
+  TextInput,
+} from 'react-native';
 
 // Import the crypto getRandomValues shim (**BEFORE** the shims)
 import 'react-native-get-random-values';
@@ -14,7 +20,15 @@ const App = () => {
   const isDarkMode = useColorScheme() === 'dark';
 
   const [provider, setProvider] = useState<ethers.providers.InfuraProvider>();
-  const [address, setAddress] = useState<String>();
+  const [address, setAddress] = useState<String>('');
+  const [biometryType, setBiometryType] = useState<String | null>('');
+  const [email, setEmail] = useState('');
+
+  useEffect(() => {
+    Keychain.getSupportedBiometryType({}).then(bio => {
+      setBiometryType(bio);
+    });
+  }, []);
 
   useEffect(() => {
     const providerInstance = new ethers.providers.InfuraProvider('ropsten', {
@@ -23,8 +37,7 @@ const App = () => {
     });
     const walletInstance = ethers.Wallet.createRandom();
 
-    // console.log(walletInstance.privateKey);
-    // console.log(walletInstance.address);
+    // show to user once
     // console.log(walletInstance.mnemonic);
 
     setPrivateKeyToKeychain(
@@ -40,13 +53,33 @@ const App = () => {
     username: string,
     password: string,
   ) => {
-    const result = await Keychain.setGenericPassword(username, password);
+    const options = {
+      accessControl:
+        Keychain.ACCESS_CONTROL.BIOMETRY_CURRENT_SET_OR_DEVICE_PASSCODE,
+      accessible: Keychain.ACCESSIBLE.WHEN_UNLOCKED_THIS_DEVICE_ONLY,
+    };
+    const result = await Keychain.setGenericPassword(
+      username,
+      password,
+      options,
+    );
     console.log(result);
   };
 
   const getPrivateKeyFromKeychain = async () => {
+    const oprions = {
+      authenticationPrompt: {
+        title: 'Title',
+        subtitle: 'Subtitle - Android Only',
+        description: 'Description - Android Only',
+        cancel: 'Cancel - - Android Only',
+      },
+      accessControl:
+        Keychain.ACCESS_CONTROL.BIOMETRY_CURRENT_SET_OR_DEVICE_PASSCODE,
+    };
+
     try {
-      const credentials = await Keychain.getGenericPassword();
+      const credentials = await Keychain.getGenericPassword(oprions);
       if (credentials) {
         console.log(
           'Credentials successfully loaded for user ' + credentials.username,
@@ -65,6 +98,12 @@ const App = () => {
       <Text style={{padding: 100}} onPress={getPrivateKeyFromKeychain}>
         Press ME please!
       </Text>
+      <TextInput
+        placeholder="email"
+        onChangeText={setEmail}
+        value={email}
+        keyboardType="email-address"
+      />
     </SafeAreaView>
   );
 };
